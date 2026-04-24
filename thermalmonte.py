@@ -194,7 +194,6 @@ def main():
         # =====================================================
         df = pd.DataFrame({
             "LOLP": avg_lolp,
-            "Deficit": avg_deficit,
             "Available": avg_available,
             "Load": load
         })
