@@ -74,7 +74,7 @@ def main():
         return load
 
     # =========================================================
-    # MONTE CARLO (FIXED)
+    # MONTE CARLO
     # =========================================================
     def run_monte_carlo(units, load, n_sim):
 
@@ -102,9 +102,8 @@ def main():
         avg_lolp = total_loss / n_sim
         avg_eens = total_eens / n_sim
         avg_available = total_available / n_sim
-        avg_deficit = avg_eens
 
-        return avg_lolp, avg_eens, avg_deficit, avg_available
+        return avg_lolp, avg_eens, avg_available
 
     # =========================================================
     # METRICS
@@ -150,7 +149,7 @@ def main():
         load = load_8760(uploaded_file)
 
         with st.spinner("Running Monte Carlo..."):
-            avg_lolp, avg_eens, avg_deficit, avg_available = run_monte_carlo(
+            avg_lolp, avg_eens, avg_available = run_monte_carlo(
                 thermal_units, load, n_sim
             )
 
