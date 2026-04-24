@@ -194,6 +194,7 @@ def main():
         # =====================================================
         df = pd.DataFrame({
             "LOLP": avg_lolp,
+            "Deficit": avg_deficit,
             "Available": avg_available,
             "Load": load
         })
@@ -201,7 +202,7 @@ def main():
 
    
         st.subheader("Daily LOLP")
-        st.line_chart(df["LOLP"].resample("d").mean())
+        st.line_chart(df["LOLP"].resample("D").mean())
 
 
         st.subheader("Load vs Available")
