@@ -308,15 +308,3 @@ def main():
             )
             st.pyplot(fig2)
 
-    # ================= HYDRO CONTRIBUTION =================
-        st.markdown("## 🔋 Hydro Contribution")
-      
-        improvement = np.array(thermal_only) - np.array(hydro_case)
-
-        fig3, ax3 = plt.subplots()
-        ax3.bar(months, improvement)
-        ax3.set_title("Monthly LOLP Reduction due to Hydro")
-        ax3.set_ylabel("Reduction (%)")
-        ax3.grid(True)
-
-        st.pyplot(fig3)
