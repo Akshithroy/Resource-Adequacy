@@ -200,7 +200,7 @@ def main():
             "Load": load
         })
 
-        df["Time"] = pd.date_range("2025-01-01", periods=8760, freq="H")
+        df["Time"] = pd.date_range("2025-01-01", periods=8760, freq="h")
         df = df.set_index("Time")
 
         df["LOLP_smooth"] = df["LOLP"].rolling(24).mean()
